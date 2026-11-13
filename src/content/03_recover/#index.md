@@ -1,0 +1,125 @@
+---
+title: Starting password recovery
+description: The steps required to recover your Tezos password using John the Ripper.
+menu: Recover
+date: 2026-12-01
+---
+
+This section provides strategies for running John the Ripper depending what you know about your password.
+
+
+## Requirements
+
+To start, you must have:
+
+1. installed John the Ripper and GPU drivers on [Windows](__/install/windows/), [macOS](__/install/macos/), and [Linux](__/install/linux/) and
+
+1. created a `tezos` working directory and [generated your hash file](__/install/generate-hash/).
+
+`cd` to your `tezos` working directory and check you can run `john` by either setting your `PATH` environment variable or using its fully-qualified path.
+
+
+## Start processing
+
+You start John the Ripper using the command:
+
+```bash
+john [options] hash
+```
+
+where:
+
+* `[options]` is one or more command-line options. You can view help with `john --help`, but this section provides guidance.
+
+* `hash` is your [generated hash file](__/install/generate-hash/).
+
+
+## Processing status
+
+While processing, press space to show the current status, e.g.
+
+```txt
+0g 0:00:00:22 0.01% 2/3 (ETA: 2026-05-18 07:04) 0g/s 21937p/s 21937c/s 21937C/s goodday12..291052
+```
+
+It displays the:
+
+* total processing time
+* percentage complete
+* processing step
+* estimated time of completion, and
+* information about the number of password checks per second.
+
+
+## Stop processing
+
+To stop processing, press `q` or `Ctrl`|`Cmd` + `C`.
+
+
+## Generic options
+
+The following John the Ripper command-line options are available no matter which strategy you use.
+
+
+### Use your GPU
+
+If you have a supported OpenCL graphics card (see output of `john --list=opencl-devices`), adding the `--format=tezos-opencl` option to the `john` command increases performance by offloading processing to the GPU.
+
+If your PC has more than one graphics card, you can target a specific device or devices using a comma-delimited list, e.g. `--devices=1` or `--devices=1,3`. Device 1 is the first GPU shown in the output of `john --list=opencl-devices`.
+
+
+### Disabling logs
+
+As John the Ripper runs, it outputs a large log to `john.log`. The log is not useful to users, so disable it using the `--no-log` option.
+
+
+### Limiting characters
+
+Setting character limits can cut processing time. Use:
+
+* `--length=N` to set the exact number of characters, e.g. `--length=12`
+* `--min-length=N` to set a minimum number of characters, e.g. `--min-length=10`
+* `--max-length=N` to set a maximum number of characters, e.g. `--max-length=15`
+
+You can set both `--min-length` and `--max-length`.
+
+
+### Saving sessions
+
+John the Ripper can run for a long time and use significant CPU and/or GPU time. It can save progress to a `.rec` file so you can stop and restore a recovery session without having to restart processing from scratch. This is useful when you want to run John the Ripper when you're not using your device.
+
+To save session progress, set the `--session=NAME` option, e.g. `--session=tezos`. A `tezos.rec` file is then created in your working directory.
+
+You can examine the status of a running process with:
+
+```bash
+john --status=tezos
+```
+
+### Restoring sessions
+
+If you stop a session by pressing `q` or `Ctrl`|`Cmd` + `C`, you can restart it again using:
+
+```bash
+john --restore=tezos
+```
+
+
+### Example command
+
+From your `tezos` working directory, [start a quick run](__/recover/quick-run/) on a GPU, without logs, using a session named `tezos`, looking for a password between 7 and 9 characters, using your `hash` file:
+
+```bash
+john --format=tezos-opencl --no-log --session=tezos --min-length=7 --max-length=9 hash
+```
+
+Press `q` or `Ctrl`|`Cmd` + `C` to stop processing. To restart, enter:
+
+```bash
+john --restore=tezos
+```
+
+
+## Password recovery strategies
+
+Use any of the following strategies according to what you know about your password:

@@ -1,0 +1,96 @@
+/* in-page <nav-heading> menu web component */
+body:not(:has(nav-heading)),
+body:has(nav-heading:empty) {
+
+  button[popovertarget="pagecontents"] {
+    display: none;
+  }
+
+}
+
+nav-heading {
+
+  inset: var(--header-height) 0 0 auto;
+  border-inline-start: 2px solid var(--color-back1);
+  transform: translateX(100%);
+
+  &:popover-open {
+    transform: none;
+
+    @starting-style {
+      transform: translateX(100%);
+    }
+
+  }
+
+  ol, li, a {
+    padding: 0;
+  }
+
+  a {
+    padding-inline-start: var(--list-indent);
+    padding-block: 0.4em;
+    border-inline-start: 2px solid var(--color-sidebar);
+
+    &.active {
+      border-color: var(--color-fore2);
+    }
+  }
+
+  li li a {
+    padding-inline-start: calc(2 * var(--list-indent));
+  }
+
+  li li li a {
+    padding-inline-start: calc(3 * var(--list-indent));
+  }
+
+}
+
+/* menu always shown */
+@media (width > 140ch) {
+
+  #pagegrid {
+    --navhead-width: var(--side-width);
+  }
+
+  button[popovertarget="pagecontents"] {
+    display: none;
+  }
+
+  nav-heading {
+    position: relative;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: auto;
+    border-block-start: 0 none;
+    transform: none;
+    background-color: transparent;
+    overscroll-behavior: auto;
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      inline-size: auto;
+      block-size: 2lh;
+      inset: auto 0 0 0;
+      background: linear-gradient(180deg, transparent, var(--color-back1));
+      pointer-events: none;
+    }
+
+    > * {
+      margin-inline: 0;
+
+      > ol {
+        position: fixed;
+        inline-size: var(--side-width);
+        block-size: calc(95vb - var(--header-fix-height));
+        overflow: auto;
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,107 @@
+/* default variables */
+:root {
+
+  /* fonts */
+  --font-head: Eesti, 'Head Fallback';
+  --font-body: Roboto, 'Body Fallback';
+  --font-mono: 'Roboto Mono', 'Mono Fallback';
+
+  --font-weight-head: 400;
+  --font-weight-bold: 600;
+  --font-weight-normal: 400;
+  --font-weight-menu: 400;
+
+  --fsize--2: clamp(0.6944rem, 0.6899rem + 0.0181vw, 0.7035rem);
+  --fsize--1: clamp(0.8333rem, 0.7811rem + 0.2088vw, 0.9377rem);
+  --fsize-0: clamp(1rem, 0.875rem + 0.5vw, 1.25rem);
+  --fsize-1: clamp(1.2rem, 0.9669rem + 0.9325vw, 1.6663rem);
+  --fsize-2: clamp(1.44rem, 1.0494rem + 1.5622vw, 2.2211rem);
+  --fsize-3: clamp(1.728rem, 1.1116rem + 2.4655vw, 2.9607rem);
+  --fsize-4: clamp(2.0736rem, 1.1371rem + 3.7461vw, 3.9467rem);
+  --fsize-5: clamp(2.4883rem, 1.102rem + 5.5452vw, 5.2609rem);
+
+  /*
+  --fsize--2: clamp(0.6944rem, 0.6906rem + 0.0172vi, 0.7035rem);
+  --fsize--1: clamp(0.8333rem, 0.7886rem + 0.1989vi, 0.9377rem);
+  --fsize-0: clamp(1rem, 0.8929rem + 0.4762vi, 1.25rem);
+  --fsize-1: clamp(1.2rem, 1.0002rem + 0.8881vi, 1.6663rem);
+  --fsize-2: clamp(1.44rem, 1.1052rem + 1.4878vi, 2.2211rem);
+  --fsize-3: clamp(1.728rem, 1.1997rem + 2.3481vi, 2.9607rem);
+  --fsize-4: clamp(2.0736rem, 1.2709rem + 3.5677vi, 3.9467rem);
+  --fsize-5: clamp(2.4883rem, 1.3001rem + 5.2811vi, 5.2609rem); */
+
+  /* layout */
+  --header-height: 4rem;
+  --main-width: 65ch;
+  --main-width-max: minmax(300px, var(--main-width));
+  --side-width: 22ch;
+  --margin-width: min(4vi, 4ch);
+  --section-gap: 3rem;
+  --list-indent: 1.2rem;
+  --header-fix-height: calc(var(--header-height) + var(--list-indent));
+
+  /* dynamic sidebars */
+  --menudir-width: 0;
+  --navhead-width: 0;
+
+  /* colors */
+  --c0: oklch(0.16 0.01 270);
+  --c1: oklch(0.19 0.02 264);
+  --c2: oklch(0.25 0.02 254);
+  --c3: oklch(0.31 0.02 264);
+  --c4: oklch(0.54 0.04 273);
+  --c5: oklch(0.96 0.01 116);
+  --c6: oklch(0.84 0.01 267);
+  --c7: oklch(0.71 0.03 270);
+  --c8: oklch(0.60 0.04 275);
+  --c9: oklch(0.50 0.04 275);
+
+  --color-back1: light-dark( var(--c5), var(--c0) );
+  --color-back2: light-dark( var(--c6), var(--c1) );
+  --color-back3: light-dark( var(--c7), var(--c2) );
+  --color-back4: light-dark( var(--c8), var(--c3) );
+  --color-back5: light-dark( var(--c9), var(--c4) );
+
+  --color-fore1: light-dark( var(--c0), var(--c5) );
+  --color-fore2: light-dark( var(--c1), var(--c6) );
+  --color-fore3: light-dark( var(--c2), var(--c7) );
+  --color-fore4: light-dark( var(--c3), var(--c8) );
+  --color-fore5: light-dark( var(--c4), var(--c9) );
+
+  --color-sidebar: var(--color-back3);
+
+  /* code theme */
+  --color-code-fore:      var(--color-fore2);
+  --color-code-back:      var(--color-back2);
+  --color-code-border:    light-dark(#dddddd, #393d41);
+  --color-code-line:      light-dark(#999999, #555555);
+  --color-code-comment:   light-dark(#008000, #8c8c8c);
+  --color-code-punc:      light-dark(#8888ff, #c5c8c6);
+  --color-code-keyword:   light-dark(#220099, #96cbfe);
+  --color-code-class:     light-dark(#0000ff, #ffffb6);
+  --color-code-const:     light-dark(#0066ff, #99cc99);
+  --color-code-symbol:    light-dark(#36acaa, #f92672);
+  --color-code-number:    light-dark(#36acaa, #ff73fd);
+  --color-code-string:    light-dark(#a31515, #a8ff60);
+  --color-code-var:       light-dark(#c6c5fe, #c6c5fe);
+  --color-code-op:        light-dark(#393a34, #ededed);
+  --color-code-attr:      light-dark(#4444ff, #f9ee98);
+  --color-code-function:  light-dark(#393a34, #dad085);
+  --color-code-regex:     light-dark(#ff0000, #e9c062);
+  --color-code-important: light-dark(#ee9900, #fd971f);
+
+}
+
+html, html[data-theme="light"], html:has(input[name="themeswitcher"][value="light"]:checked) {
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color-scheme: dark;
+	}
+}
+
+html[data-theme="dark"], html:has(input[name="themeswitcher"][value="dark"]:checked) {
+	color-scheme: dark;
+}
