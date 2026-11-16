@@ -5,4 +5,4 @@ menu: Install
 date: 2026-12-01
 ---
 
-[John the Ripper](https://www.openwall.com/john/) is available on several desktop and mobile operating systems. This site provides instructions for [Windows](__/install/windows/), [macOS](__/install/macos/), and [Linux](__/install/linux/):
+[John the Ripper](https://www.openwall.com/john/) is available on several desktop and mobile operating systems. This tutorial uses the [*bleeding-jumbo* release](https://github.com/openwall/john/tree/bleeding-jumbo) which provides community enhancements. See the instructions for:

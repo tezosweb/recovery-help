@@ -13,3 +13,5 @@ This site explains how to recover your Tezos fundraiser password using [John the
 Tezos released a [fundraiser password recovery service](https://recovery.tezos.com/) in 2019. This successfully recovered one third of registered accounts but is unlikely to recover many more, so the service will be stopped in June 2027.
 
 If you have not recovered your password, this series of tutorials and videos shows you how to run the same recovery software on your own PC.
+
+[Get started...](__/overview/)

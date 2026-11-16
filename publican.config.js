@@ -35,6 +35,7 @@ publican.config.dirPages.sortOrder = 1;
 // pass-through files
 publican.config.passThrough.add({ from: './src/media', to: './media/' });
 publican.config.passThrough.add({ from: './src/root/', to: './' });
+publican.config.passThrough.add({ from: './src/download', to: './download/' });
 
 // jsTACs rendering defaults
 const port = env('SERVE_PORT', 8000);

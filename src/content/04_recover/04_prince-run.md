@@ -43,7 +43,7 @@ Include your known capitalization and symbol replacements then save these to a f
 Pass the file to `john` using the `--prince` option as well as `--prince-elem-cnt-max` to set the maximum number of string combinations:
 
 ```bash
-john --prince=wordpart.txt --prince-elem-cnt-max=4 hash
+john --prince=wordpart.txt --prince-elem-cnt-max=4 hash.txt
 ```
 
 PRINCE mode takes items from your wordlist and generates password candidates by concatenating them in every possible combination. The possibilities would include:
@@ -58,12 +58,14 @@ CHRIS123!$bob
 
 A 300-line wordlist with up 4 combinations typically takes a couple of days to process. Increasing it to 5 exponentially increases the number of candidates and processing could take weeks.
 
-Add [generic options](__/recover/#generic-options) when possible to use the GPU, disable logs, save the session, and set minimum and/or maximum password lengths, e.g.
+Add [generic options](__/recover/#generic-options) when possible to use the GPU, disable logs, save the session, set password lengths, and output a recovery file e.g.
 
 ```bash
-john --prince=wordpart.txt --prince-elem-cnt-max=4 --format=tezos-opencl --no-log --session=tezos --min-length=7 --max-length=9 hash
+john --prince=wordpart.txt --prince-elem-cnt-max=4 --format=tezos-opencl --no-log --session=tezos --min-length=7 --max-length=9 --pot=tezos.pot hash.txt
 ```
 
 (Remove the `--format=tezos-opencl` GPU option if the command returns an error.)
 
-John the Ripper shows the password and saves it to a [`john.pot` file](__/recover/recovery-file/) when recovery is successful.
+John the Ripper shows the password and saves it to a [`tezos.pot` file](__/recover/recovery-file/) when recovery is successful.
+
+[Consider other recovery strategies](__/recover/) if your password is not found.

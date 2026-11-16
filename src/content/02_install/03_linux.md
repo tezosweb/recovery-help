@@ -80,4 +80,4 @@ You will either see a list of devices or an error such as *"Error: No OpenCL-cap
 john --test --format=tezos-opencl
 ```
 
-You can now [generate your Tezos password hash file...](__/install/generate-hash/)
+You can now [create your Tezos password `hash.txt` file...](__/create-hash/)

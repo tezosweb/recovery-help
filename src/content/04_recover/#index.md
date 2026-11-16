@@ -12,11 +12,13 @@ This section provides strategies for running John the Ripper depending what you 
 
 To start, you must have:
 
-1. installed John the Ripper and GPU drivers on [Windows](__/install/windows/), [macOS](__/install/macos/), and [Linux](__/install/linux/) and
+1. installed John the Ripper and GPU drivers on [Windows](__/install/windows/), [macOS](__/install/macos/), and [Linux](__/install/linux/)
 
-1. created a `tezos` working directory and [generated your hash file](__/install/generate-hash/).
+1. created a `tezos` working directory, and
 
-`cd` to your `tezos` working directory and check you can run `john` by either setting your `PATH` environment variable or using its fully-qualified path.
+1. [generated your `hash.txt` file](__/install/generate-hash/) and copied it to the working directory.
+
+`cd` to your `tezos` working directory in your terminal.
 
 
 ## Start processing
@@ -24,14 +26,14 @@ To start, you must have:
 You start John the Ripper using the command:
 
 ```bash
-john [options] hash
+john [options] hash.txt
 ```
 
 where:
 
 * `[options]` is one or more command-line options. You can view help with `john --help`, but this section provides guidance.
 
-* `hash` is your [generated hash file](__/install/generate-hash/).
+* `hash.txt` is your [generated `hash.txt` file](__/install/generate-hash/).
 
 
 ## Processing status
@@ -84,6 +86,11 @@ Setting character limits can cut processing time. Use:
 You can set both `--min-length` and `--max-length`.
 
 
+### Set a recovery file name
+
+JtR creates a `john.pot` file in its `run` directory when it starts processing. The file has no content until it recovers your password and processing ends. You can change the recovery file location using the `--pot` option, e.g. set `--pot=tezos.pot` to create a `tezos.pot` file in the working directory.
+
+
 ### Saving sessions
 
 John the Ripper can run for a long time and use significant CPU and/or GPU time. It can save progress to a `.rec` file so you can stop and restore a recovery session without having to restart processing from scratch. This is useful when you want to run John the Ripper when you're not using your device.
@@ -96,6 +103,7 @@ You can examine the status of a running process with:
 john --status=tezos
 ```
 
+
 ### Restoring sessions
 
 If you stop a session by pressing `q` or `Ctrl`|`Cmd` + `C`, you can restart it again using:
@@ -107,10 +115,10 @@ john --restore=tezos
 
 ### Example command
 
-From your `tezos` working directory, [start a quick run](__/recover/quick-run/) on a GPU, without logs, using a session named `tezos`, looking for a password between 7 and 9 characters, using your `hash` file:
+From your `tezos` working directory, [start a quick run](__/recover/quick-run/) on a GPU, without logs, using a session named `tezos`, looking for a password between 7 and 9 characters that's stored in `tezos.pot` and uses your `hash.txt` file:
 
 ```bash
-john --format=tezos-opencl --no-log --session=tezos --min-length=7 --max-length=9 hash
+john --format=tezos-opencl --no-log --session=tezos --min-length=7 --max-length=9 --pot=tezos.pot hash.txt
 ```
 
 Press `q` or `Ctrl`|`Cmd` + `C` to stop processing. To restart, enter:

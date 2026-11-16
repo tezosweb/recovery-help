@@ -27,3 +27,5 @@ Every character use exponentially increases the number of password possibilities
 * 12 characters: 12 million years
 
 Using numbers and symbols increases the possibilities further, but having some idea about your password's format can reduce processing time to hours.
+
+Next: [view the requirements...](__/overview/requirements/)

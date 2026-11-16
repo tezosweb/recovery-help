@@ -5,15 +5,11 @@ menu: More options
 date: 2026-12-01
 ---
 
-If the strategies suggested here do not help recover your Tezos password, John the Ripper offers further password recovery options.
+If the [strategies suggested here](__/recover/) do not help recover your Tezos password, John the Ripper offers further options. Refer to the guides:
 
 * [John the Ripper home page](https://www.openwall.com/john/)
 * [John the Ripper documentation](https://www.openwall.com/john/doc/)
 * [John the Ripper step-by-step tutorials](https://openwall.info/wiki/john/tutorials)
-
-This tutorial uses the *bleeding-jumbo* release which provides community enhancements:
-
-* [JtR bleeding-jumbo on Github](https://github.com/openwall/john/tree/bleeding-jumbo)
 
 You can use wordlist generators to create password candidate files from a smaller list of suggestions:
 
