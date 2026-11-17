@@ -7,6 +7,7 @@ date: 2026-12-01
 
 This site explains how to recover your Tezos fundraiser password using [John the Ripper](https://www.openwall.com/john/) -- a tool that uses brute force to attempt billions of character combinations to find the correct string.
 
+<youtube-lite video="KeXg5UTrJCo" placeholder="__/media/images/video01-intro.png"></youtube-lite>
 
 ## The Tezos Recovery service
 
@@ -14,4 +15,4 @@ Tezos released a [fundraiser password recovery service](https://recovery.tezos.c
 
 If you have not recovered your password, this series of tutorials and videos shows you how to run the same recovery software on your own PC.
 
-[Get started...](__/overview/)
+**[Get started...](__/overview/)**

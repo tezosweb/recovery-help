@@ -3,10 +3,22 @@
   position: sticky;
   inset-block-start: 0;
   inline-size: 100%;
-  background-color: var(--color-sidebar);
-  border-block-end: 1px solid var(--color-back1);
+  padding-block-start: 0.5em;
+  background-color: var(--color-back1);
+  border-block-end: 1px solid var(--color-back3);
+  box-shadow: 0 1px 1px var(--color-shad1);
   z-index: 2;
   view-transition-name: none;
+
+  * {
+    margin: 0;
+    text-decoration: none;
+  }
+
+  svg {
+    inline-size: 1.5em;
+    block-size: 1.5em;
+  }
 
   & > nav {
     inline-size: 100%;
@@ -25,54 +37,29 @@
     }
   }
 
-  svg {
-    inline-size: 1.5em;
-    block-size: 1.5em;
+  .title {
+    text-align: center;
+    line-height: 0.95;
+    margin-inline: auto;
   }
 
-  .logo {
-    font-size: var(--fsize-1);
-    font-weight: var(--font-weight-head);
-  }
-
-  > nav > *:not(.logo) {
-
-    a:link, a:visited, summary, label {
-      font-weight: var(--font-weight-menu);
-      text-decoration: none;
-      color: var(--color-fore3);
-    }
-
-    a, summary, label {
-      &:hover, &:active, &:focus {
-        color: var(--color-fore1);
-      }
-    }
-
-  }
-
-  button {
-    appearance: none;
-    color: inherit;
-    background-color: transparent;
-    border: 0 none;
-    cursor: pointer;
-  }
-
-  ul, li {
+  & > menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-
-  ul {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.6em;
-  }
+    gap: 0.5em;
 
-  ul, .share {
-    margin-inline-start: auto;
+    li > * {
+      display: block;
+      padding: 0.5em;
+    }
+
+    strong {
+      color: var(--color-fore5);
+    }
   }
 
   details {
@@ -83,56 +70,61 @@
       transition: none;
     }
 
-    &:open summary svg {
-      color: var(--color-fore1);
-    }
-  }
-
-  summary {
-
-    &::before {
-      display: none;
-    }
-
     svg {
-      block-size: var(--header-height);
+      color: var(--color-fore3);
     }
 
-  }
-
-  menu {
-    position: absolute;
-    inline-size: 18ch;
-    max-block-size: calc(98vb - var(--header-height) - 1em);
-    inset-block-start: 100%;
-    inset-inline-end: 0;
-    padding: 0.5em 0;
-    background-color: var(--color-sidebar);
-    overflow-block: auto;
-    overscroll-behavior: contain;
-
-    li {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+    &:open, &:hover, &:focus, &:active, &:focus-within {
+      summary svg {
+        color: var(--color-fore5);
+      }
     }
 
-    a, strong {
-      display: block;
-      padding-inline: 1em;
-      padding-block: 0.3em;
+    summary {
+
+      &::before {
+        display: none;
+      }
+
     }
 
-    svg {
-      inline-size: 1.5em;
-      block-size: 1.2em;
-    }
-
-    hr {
-      inline-size: calc(100% - 2em);
-      margin-block: 0.5em;
-      margin-inline: auto;
+    menu {
+      position: absolute;
+      inline-size: 18ch;
+      max-block-size: calc(98dvb - (var(--header-height) * 2));
+      inset-block-start: calc(100% + 0.5em);
+      inset-inline-end: 0;
+      padding: 0.5em 0;
       background-color: var(--color-back1);
+      border: 1px solid var(--color-back3);
+      box-shadow: 0 5px 10px var(--color-shad1);
+      overflow-block: auto;
+      overscroll-behavior: contain;
+
+      li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      a, strong {
+        display: block;
+        padding-inline: 1em;
+        padding-block: 0.3em;
+      }
+
+      svg {
+        inline-size: 1.5em;
+        block-size: 1.2em;
+      }
+
+      hr {
+        inline-size: calc(100% - 2em);
+        margin-block: 0.5em;
+        margin-inline: auto;
+        background-color: var(--color-back2);
+      }
+
     }
 
   }
@@ -141,7 +133,7 @@
 
 .themeswitcher {
 
-  input {
+  input, span {
     position: absolute;
     clip: rect(0 0 0 0);
     inline-size: 1px;
@@ -151,7 +143,7 @@
 
   label {
     display: none;
-    padding-inline: 1em;
+    padding-inline: 0.2em;
     padding-block: 0.3em;
     cursor: pointer;
     pointer-events: none;
@@ -163,12 +155,16 @@
     pointer-events: all;
   }
 
+  svg {
+    color: var(--color-fore3);
+  }
+
   svg:hover, svg:focus, svg:active {
-    stroke: var(--color-fore1);
+    color: var(--color-fore5);
   }
 
   &:focus-within * {
-    color: var(--color-fore1);
+    color: var(--color-fore5);
   }
 
 }

@@ -11,12 +11,14 @@ Download and extract the file named `winX64_1_JtR.zip`. For the purposes of this
 
 The `C:\JtR\run` directory provides JtR executables. You can run `john.exe` from Powershell using the full path, e.g.
 
+{{ terminal }}
 ```bash
 C:\JtR\run\john
 ```
 
 Alternatively, you can update your `PATH` environment variable temporarily to execute `john.exe` from anywhere:
 
+{{ terminal }}
 ```bash
 # do after opening Powershell
 $env:path += ";C:\JtR\run\"
@@ -37,6 +39,7 @@ Or you can permanently update your `PATH` environment variable if you intend usi
 
 This tutorial presumes you can run `john` from anywhere. Test it works:
 
+{{ terminal }}
 ```bash
 cd \
 john --list=build-info
@@ -49,14 +52,18 @@ JtR communicates with your graphics card using OpenCL (Open Computing Language) 
 
 Check whether JtR can access your GPUs:
 
+{{ terminal }}
 ```bash
 john --list=opencl-devices
 ```
 
 You will either see a list of devices or an error such as *"Error: No OpenCL-capable devices were detected"*. Test GPU performance by entering:
 
+{{ terminal }}
 ```bash
 john --test --format=tezos-opencl
 ```
 
-You can now [create your Tezos password `hash.txt` file...](__/create-hash/)
+<youtube-lite video="5BdRwiRDq9g"></youtube-lite>
+
+You can now **[create your Tezos password `hash.txt` file...](__/create-hash/)**

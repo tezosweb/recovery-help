@@ -13,6 +13,7 @@ John the Ripper requires a Tezos password `hash.txt` file before it can attempt 
 
 The file contains these values and a generated hash in text format on a single line, e.g.
 
+{{ `hashes.txt` example }}
 ```txt
 $tezos$1*2048*tezos secret seed phrase used to create your wallet that stores coins for spending later*your@email.com*tz1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*abcdef0123456789fedcba9876543210cebcebcebceb
 ```

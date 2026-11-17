@@ -11,9 +11,9 @@ h1, h2, h3 {
   font-family: var(--font-head);
   font-weight: var(--font-weight-head);
   margin-block-start: 1.5em;
-  line-height: 0.85;
+  line-height: 1;
   color: var(--color-fore3);
-  scroll-margin-block-start: var(--header-fix-height);
+  scroll-margin-block-start: var(--header-height);
 
   span {
     color: var(--color-fore5);
@@ -38,9 +38,9 @@ ul, ol, li {
 
 main aside, blockquote {
   font-size: var(--fsize--1);
-  padding-block: calc(0.5 * var(--list-indent));
+  padding-block: var(--list-indent);
   padding-inline: var(--list-indent);
-  margin-block: var(--list-indent);
+  margin-block: calc(2 * var(--list-indent));
   color: var(--color-fore1);
   background-color: var(--color-back3);
   border-inline-start: 3px solid var(--color-fore5);
@@ -129,7 +129,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active, a:focus {
-  color: var(--color-fore1);
+  color: var(--color-fore5);
 }
 
 svg, use {

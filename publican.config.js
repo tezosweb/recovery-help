@@ -25,7 +25,7 @@ publican.config.defaultHTMLTemplate = env('TEMPLATE_DEFAULT');
 publican.config.slugReplace.set(/\d+_/g, '');
 
 // default syntax language
-publican.config.markdownOptions.prism.defaultLanguage = 'bash';
+publican.config.markdownOptions.prism = false;
 
 // sorting and pagination
 publican.config.dirPages.size = 24;

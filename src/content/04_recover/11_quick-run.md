@@ -9,18 +9,20 @@ A John the Ripper quick run attempts to find simpler passwords using combination
 
 Start a quick run without any specific options, `cd` to your working directory and run:
 
+{{ terminal }}
 ```bash
 john hash.txt
 ```
 
-Add [generic options](__/recover/#generic-options) when possible to use the GPU, disable logs, save the session, set password lengths, and output a recovery file e.g.
+Add [generic options](__/recover/generic-options/) when possible to use the GPU, disable logs, save the session, set password lengths, and output a recovery file e.g.
 
+{{ terminal }}
 ```bash
 john --format=tezos-opencl --no-log --session=tezos --min-length=7 --max-length=9 --pot=tezos.pot hash.txt
 ```
 
-(Remove the `--format=tezos-opencl` GPU option if the command returns an error.)
+> Remove the `--format=tezos-opencl` GPU option if the command returns an error.
 
 John the Ripper shows the password and saves it to a [`tezos.pot` file](__/recover/recovery-file/) when recovery is successful.
 
-[Consider other recovery strategies](__/recover/) if your password is not found.
+**[Consider a masking run](__/recover/masking-run/)** if your password is not found.

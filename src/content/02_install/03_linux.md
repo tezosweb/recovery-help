@@ -7,6 +7,7 @@ date: 2026-12-01
 
 Although flatpak versions of John the Ripper are [available for Linux](https://github.com/openwall/john-packages/releases/latest), compiling the application on your local system provides better performance:
 
+{{ terminal }}
 ```bash
 cd ~
 
@@ -25,12 +26,14 @@ cd ../run/ && ./john --list=build-info
 
 For the purposes of this tutorial, we'll assume you've installed JtR to `~/john` so the `~/john/run` directory provides JtR executables. You can run `john` from the terminal using the full path, e.g.
 
+{{ terminal }}
 ```bash
 ~/john/run/john
 ```
 
 Alternatively, you can update your `PATH` environment variable temporarily to execute `john.exe` from anywhere:
 
+{{ terminal }}
 ```bash
 # do after opening terminal
 PATH=$PATH:~/john/run
@@ -42,6 +45,7 @@ john
 
 Finally, you can permanently update your `PATH` environment variable if you want to use JtR regularly by adding a line to your `~/.bashrc` or similar shell configuration file, e.g.
 
+{{ terminal }}
 ```bash
 # add at end of ~/.bashrc
 export PATH=$PATH:~/john/run
@@ -49,6 +53,7 @@ export PATH=$PATH:~/john/run
 
 This tutorial presumes you can run `john` from anywhere. Test it works:
 
+{{ terminal }}
 ```bash
 cd ~
 john --list=build-info
@@ -59,6 +64,7 @@ john --list=build-info
 
 JtR communicates with your graphics card using OpenCL (Open Computing Language) -- refer to the [Linux device support list](https://opencl.gpuinfo.org/listdevices.php?platform=linux). Distros and devices vary, but you can install the latest NVIDIA drivers on Ubuntu using:
 
+{{ terminal }}
 ```bash
 ubuntu-drivers devices
 sudo ubuntu-drivers install
@@ -70,14 +76,16 @@ Linux drivers for AMD graphics cards are available from [amd.com](https://www.am
 
 Check whether JtR can access your GPUs:
 
+{{ terminal }}
 ```bash
 john --list=opencl-devices
 ```
 
 You will either see a list of devices or an error such as *"Error: No OpenCL-capable devices were detected"*. Test GPU performance by entering:
 
+{{ terminal }}
 ```bash
 john --test --format=tezos-opencl
 ```
 
-You can now [create your Tezos password `hash.txt` file...](__/create-hash/)
+You can now **[create your Tezos password `hash.txt` file...](__/create-hash/)**

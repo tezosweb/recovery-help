@@ -9,6 +9,7 @@ JtR creates a `john.pot` file in its `run` directory when it starts processing. 
 
 On recovery, the `tezos.pot` file has the same content as [your `hash.txt` file](__/install/generate-hash/), followed by a colon (`:`) and your password. For example:
 
+{{ `tezos.pot` example }}
 ```txt
 your@email.com:$tezos$1*2048*tezos secret seed phrase used to create your wallet that stores coins for spending later*your@email.com*tz1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*abcdef0123456789fedcba9876543210cebcebcebceb:Password123
 ```

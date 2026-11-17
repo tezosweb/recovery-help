@@ -15,24 +15,18 @@ Once you have installed Docker Desktop:
 
 1. Run the following `docker` command on Linux or macOS, replacing the seed words, email, tz address, and `hash.txt` file location as necessary:
 
+    {{ terminal }}
     ```bash
     # generate hash.txt (Linux/macOS)
-    docker run -it --rm --name python \
-      -v ${PWD}:/usr/src/myapp \
-      -w /usr/src/myapp \
-      python:3-alpine \
-      python tezos2john.py \
-      'tezos secret seed phrase used to create your wallet that stores coins for spending later' \
-      'your@email.com' \
-      'tz1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
-      > ~/tezos/hash.txt
+    docker run -it --rm --name python -v ${PWD}:/usr/src/myapp -w /usr/src/myapp python:3-alpine python tezos2john.py 'tezos secret seed phrase used to create your wallet that stores coins for spending later' 'your@email.com' 'tz1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' > ~/tezos/hash.txt
     ```
 
-    The equivalent Windows Powershell command:
+    The Windows Powershell command is identical except for the `hash.txt` location:
 
+    {{ terminal }}
     ```bash
     # generate hash.txt (Windows)
     docker run -it --rm --name python -v ${PWD}:/usr/src/myapp -w /usr/src/myapp python:3-alpine python tezos2john.py 'tezos secret seed phrase used to create your wallet that stores coins for spending later' 'your@email.com' 'tz1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' > C:\tezos\hash.txt
     ```
 
-You can now [start password recovery with John the Ripper...](__/recover/)
+You can now **[start password recovery with John the Ripper...](__/recover/)**

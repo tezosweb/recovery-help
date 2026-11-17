@@ -2,30 +2,20 @@
 
   <nav>
 
-    <!-- menu toggle -->
-    <button popovertarget="menudir" popovertargetaction="toggle" title="menu">
-      <svg><use xlink:href="#svg-menu"></use></svg>
-    </button>
-
     <!-- logo -->
-    <p class="logo"><svg><use xlink:href="#svg-logo"></use></svg> Tezos</p>
+    <p class="logo"><svg><use xlink:href="#svg-logo"></use></svg><span>Tezos</span></p>
 
-    <p><a href="__/">${ tacs.config.title }</a></p>
+    <p class="title"><a href="__/">${ tacs.config.title }</a></p>
 
-    <!-- main menu -->
-    ${ tacs.lib.nav.menuMain( tacs, data.link, -1, 2 ).replace(/<li>.+?Start.+?<\/li>/i, '') }
+    <!-- theme switcher -->
+    ${ include('_partials/themeswitcher.html') }
 
     <!-- share menu -->
     ${ include('_partials/menu-share.html') }
 
-    <!-- configuration -->
-    ${ include('_partials/menu-config.html') }
-
-    <!-- contents toggle -->
-    <button popovertarget="pagecontents" popovertargetaction="toggle" title="page sections">
-      <svg><use xlink:href="#svg-toc"></use></svg>
-    </button>
-
   </nav>
+
+  <!-- main menu -->
+  ${ tacs.lib.nav.menuMain( tacs, data.link, 0, 1 ).replace(/<li>.+?Start.+?<\/li>/i, '') }
 
 </header>

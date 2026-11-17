@@ -35,7 +35,7 @@ body, h2, h3 {
 		background-color: var(--color-code-back);
 		padding-block: 0.3em 0.5em;
 		padding-inline: 0 2em;
-		border-block-start: 2px solid var(--color-hint1);
+		border-block-start: 2px solid var(--color-code-back);
 		border-radius: 3px 3px 0 0;
 
 		&::before {
@@ -99,7 +99,7 @@ body, h2, h3 {
 	}
 
 	&.language-txt dfn {
-		border-color: #777;
+		border-color: oklch(from var(--color-code-back) calc(l + 0.1) c h);
 
 		&::before {
 			background-image: url(../../media/icons/text.svg);
@@ -115,7 +115,7 @@ body, h2, h3 {
 	}
 
 	&.language-bash dfn {
-		border-color: #777;
+		border-color: oklch(from var(--color-code-back) calc(l - 0.1) c h);
 
 		&::before {
 			background-image: url(../../media/icons/bash.svg);
@@ -147,7 +147,13 @@ code {
 }
 
 pre, pre > code {
-	white-space: pre;
+	white-space: pre-wrap;
+	overflow-wrap: normal;
+	word-break: keep-all;
+
+	.language-txt {
+		word-break: break-all;
+	}
 }
 
 :where(h1, h2, h3, h4) code {
@@ -182,90 +188,6 @@ pre:has(code[class*="language-"]), .copycode {
 	border-radius: .3em;
 	white-space: nowrap;
 	user-select: all;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: var(--color-code-comment);
-}
-
-.token.punctuation {
-	color: var(--color-code-punc);
-}
-
-.namespace {
-	opacity: .7;
-}
-
-.token.property,
-.token.keyword,
-.token.tag,
-.token.url {
-	color: var(--color-code-keyword);
-}
-
-.token.class-name,
-.token.entity {
-	color: var(--color-code-class);
-}
-
-.token.boolean,
-.token.constant {
-	color: var(--color-code-const);
-}
-
-.token.symbol,
-.token.deleted {
-	color: var(--color-code-symbol);
-}
-
-.token.number {
-	color: var(--color-code-number);
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-	color: var(--color-code-string);
-}
-
-.token.variable {
-	color: var(--color-code-var);
-}
-
-.token.operator {
-	color: var(--color-code-op);
-}
-
-.token.atrule,
-.token.attr-value {
-	color: var(--color-code-attr);
-}
-
-.token.function {
-	color: var(--color-code-function);
-}
-
-.token.regex {
-	color: var(--color-code-regex);
-}
-
-.token.important {
-	color: var(--color-code-important);
-}
-
-.token.important,
-.token.bold {
-	font-weight: var(--font-weight-bold);
-}
-
-.token.italic {
-	font-style: italic;
 }
 
 /* copy text */

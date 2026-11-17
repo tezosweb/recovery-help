@@ -10,19 +10,28 @@
 <meta http-equiv="Content-Security-Policy" content="
 default-src 'none';
 base-uri 'self';
-img-src 'self' data:;
+img-src 'self' https://i.ytimg.com data:;
 media-src 'none';
 font-src 'self';
-style-src 'self';
+style-src 'self' 'sha256-b4EJa4w89jtLvjxsBloYaCfwO1Xltuqrcz89Gtfj77U=';
 script-src 'self' 'sha256-${ tacs.script.get('theme').hash }' 'sha256-${ data.script.get('schema').hash }' 'sha256-${ tacs.script.get('speculation').hash }';
 connect-src '${ tacs.config.isDev ? 'self' : 'none' }';
 form-action 'none';
-frame-src 'none';
+frame-src www.youtube-nocookie.com;
 manifest-src 'self';
 ">
 
 <!-- assets -->
-<link rel="preload" href="__/media/fonts/manrope.woff2" as="font" type="font/woff2">
+<link rel="preload" href="__/media/fonts/Eesti-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="__/media/fonts/Roboto-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="__/media/fonts/Roboto-400italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="__/media/fonts/Roboto-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="__/media/fonts/Roboto-600italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="__/media/fonts/Roboto-mono-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="__/media/fonts/Roboto-mono-400italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="__/media/fonts/Roboto-mono-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="__/media/fonts/Roboto-mono-600italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
 <link rel="stylesheet" href="__/css/main.css">
 <script type="module" src="__/js/main.js"></script>
 ${ tacs.script.get('theme').code }
@@ -69,12 +78,6 @@ ${ data.script.get('schema').code }
 <meta property="og:image:height" content="512">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="${ tacs.config.authorX }">
-
-<!-- prefetch -->
-${ data?.postback?.link ? `<link rel="prefetch" href="${ data.postback.link }" as="document">` : '' }
-${ data?.postnext?.link ? `<link rel="prefetch" href="${ data.postnext.link }" as="document">` : '' }
-${ data?.pagination?.hrefBack ? `<link rel="prefetch" href="${ data.pagination.hrefBack }" as="document">` : '' }
-${ data?.pagination?.hrefNext ? `<link rel="prefetch" href="${ data.pagination.hrefNext }" as="document">` : '' }
 
 </head>
 <body>

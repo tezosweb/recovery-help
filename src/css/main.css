@@ -2,24 +2,11 @@
 @import url('./core/reset.css') layer(reset);
 @import url('./core/variables.css');
 @import url('./core/elements.css');
-
-/*
-@import url('./core/details.css');
 @import url('./core/layout.css');
 @import url('./core/utility.css');
-@import url('./core/background.css');
-
 @import url('./components/header.css');
 @import url('./components/logo.css');
-@import url('./components/nav.css');
-@import url('./components/nav-menudir.css');
-@import url('./components/nav-heading.css');
 @import url('./components/nav-pagelist.css');
-@import url('./components/nav-pagination.css');
-@import url('./components/nav-backnext.css');
-@import url('./components/nav-posttags.css');
-@import url('./components/nav-taglist.css');
 @import url('./components/title.css');
 @import url('./components/code.css');
 @import url('./components/footer.css');
-*/

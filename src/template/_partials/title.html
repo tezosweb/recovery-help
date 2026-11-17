@@ -8,7 +8,7 @@
     <time datetime="${ tacs.lib.format.dateISO( data.modified || data.date ) }">${ tacs.lib.format.dateHuman( data.modified || data.date ) }</time>
 
     ${ data?.wordCount ?
-      ` &bull; ${ tacs.lib.format.numberRound( data.wordCount ) } words, ${ tacs.lib.format.numberRound( Math.ceil( data.wordCount / 200 ) ) }-minute read` : ''
+      ` &bull; ${ tacs.lib.format.numberRound( data.wordCount ) } words &bull; ${ tacs.lib.format.numberRound( Math.ceil( data.wordCount / 200 ) ) }-minute read` : ''
     }
   </p>
 

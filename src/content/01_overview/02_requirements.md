@@ -27,4 +27,4 @@ To attempt Tezos password recovery, you require:
 
 > Note: you can run password recovery tools in Windows WSL2, a virtual machine, or Docker container, but these are not the fastest options and require configuration to use the host's GPU. This tutorial recommends a bare-metal installation.
 
-Next: [consider security...](__/overview/security/)
+Next: **[consider security...](__/overview/security/)**

@@ -13,6 +13,7 @@ John the Ripper provides a `tezos2john.py` Python script in its `run` directory 
 
 The Python command format:
 
+{{ terminal }}
 ```bash
 python3 tezos2john.py '<seed-words>' '<email>' '<tzAddress>' > hash.txt
 ```
@@ -25,22 +26,20 @@ Steps:
 
 1. Run this command on Linux or macOS, replacing the seed words, email, tz address, and `hash.txt` file location as necessary:
 
+    {{ terminal }}
     ```bash
     # generate hash.txt (Linux/macOS)
-    python3 tezos2john.py \
-      'tezos secret seed phrase used to create your wallet that stores coins for spending later' \
-      'your@email.com' \
-      'tz1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
-      > ~/tezos/hash.txt
+    python3 tezos2john.py 'tezos secret seed phrase used to create your wallet that stores coins for spending later' 'your@email.com' 'tz1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' > ~/tezos/hash.txt
     ```
 
     > Note: if this command fails, try `python` instead of `python3`.
 
-    The equivalent Windows Powershell command:
+    The Windows Powershell command is identical except for the `hash.txt` location:
 
+    {{ terminal }}
     ```bash
     # generate hash.txt (Windows)
     python tezos2john.py 'tezos secret seed phrase used to create your wallet that stores coins for spending later' 'your@email.com' 'tz1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' > C:\tezos\hash.txt
     ```
 
-You can now [start password recovery with John the Ripper...](__/recover/)
+You can now **[start password recovery with John the Ripper...](__/recover/)**

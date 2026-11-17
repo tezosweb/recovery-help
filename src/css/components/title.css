@@ -1,18 +1,11 @@
 /* title */
 main header {
 
-  margin-block-end: var(--section-gap);
+  margin-block-end: 2em;
 
   h1 {
     margin-block: 0;
     padding-block: 0 0.2em;
-
-    span {
-      display: block;
-      font-size: 0.5em;
-      letter-spacing: -0.05em;
-      color: var(--color-fore4);
-    }
   }
 
   p {
@@ -21,7 +14,7 @@ main header {
   }
 
   p.meta {
-    font-size: var(--fsize--1);
+    font-size: var(--fsize--2);
   }
 
 }
@@ -30,7 +23,7 @@ main header {
 
   position: relative;
   font-size: var(--fsize--1);
-  color: var(--color-fore4);
+  color: var(--color-fore5);
 
   ol, li, a {
     text-decoration: none;

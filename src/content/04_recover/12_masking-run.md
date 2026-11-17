@@ -41,18 +41,20 @@ All candidates would be 12 characters because that's what the `mask` specifies. 
 
 Example command for a masking run:
 
+{{ terminal }}
 ```bash
 john --mask=[Rr][o0]ver?s[12][90]?d?d?u?u hash.txt
 ```
 
-Add [generic options](__/recover/#generic-options) when possible to use the GPU, disable logs, save the session, and output a recovery file, e.g.
+Add [generic options](__/recover/generic-options/) when possible to use the GPU, disable logs, save the session, and output a recovery file, e.g.
 
+{{ terminal }}
 ```bash
 john --mask=[Rr][o0]ver?s[12][90]?d?d?u?u --format=tezos-opencl --no-log --session=tezos --pot=tezos.pot  hash.txt
 ```
 
-(Remove the `--format=tezos-opencl` GPU option if the command returns an error.)
+> Remove the `--format=tezos-opencl` GPU option if the command returns an error.
 
 John the Ripper shows the password and saves it to a [`tezos.pot` file](__/recover/recovery-file/) when recovery is successful.
 
-[Consider other recovery strategies](__/recover/) if your password is not found.
+**[Consider a wordlist run](__/recover/wordlist-run/)** if your password is not found.

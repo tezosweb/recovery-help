@@ -12,4 +12,4 @@ Your recovery PC stores sensitive Tezos data.
 * Avoid backing-up your [password `hash.txt` file](__/create-hash/) and [`tezos.pot` recovery file](__/recover/recovery-file/) to shared drives or systems such as Dropbox and OneDrive.
 * Consider disconnecting your device from the internet during password recovery runs.
 
-Once you have everything ready, please [proceed to John the Ripper installation...](__/install/)
+Once you have everything ready, please **[proceed to John the Ripper installation...](__/install/)**

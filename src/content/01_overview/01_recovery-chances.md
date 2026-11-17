@@ -17,15 +17,17 @@ If you have no idea about your password, John the Ripper can try millions of com
 
 Consider a six-character password that only uses the 52 upper and lower case western letters. This results in 52<sup>6</sup> combinations -- a total of almost 20 billion possibilities. Checking 500,000 passwords per second takes almost five hours to process them all. It would take three hours to recover the *average* 6-character password.
 
-Every character use exponentially increases the number of password possibilities:
+Every additional character exponentially increases the number of password possibilities:
 
-* 7 characters: 12 days
-* 8 characters: 2 years
-* 9 characters: 90 years
-* 10 characters: 5,000 years
-* 11 characters: 240,000 years
-* 12 characters: 12 million years
+|characters|processing time|
+|-:|-|
+|7|12 days|
+|8|2 years|
+|9|90 years|
+|10|5,000 years|
+|11|240,000 years|
+|12|12 million years|
 
 Using numbers and symbols increases the possibilities further, but having some idea about your password's format can reduce processing time to hours.
 
-Next: [view the requirements...](__/overview/requirements/)
+Next: **[view the requirements...](__/overview/requirements/)**

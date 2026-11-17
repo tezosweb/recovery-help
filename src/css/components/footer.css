@@ -1,53 +1,11 @@
 #pagegrid > footer {
 
-  font-size: var(--fsize--1);
-  background-color: var(--color-sidebar);
-  border-block-start: 1px solid var(--color-back1);
+  font-size: var(--fsize--2);
+  border-block-start: 1px solid var(--color-back3);
 
-  body.animback & {
-    background-color: var(--color-back1);
-  }
-
-  & > nav {
-    inline-size: 100%;
-    display: grid;
-    grid-template-columns: 1fr min-content;
-    align-items: center;
-    gap: 1rem;
-    margin: var(--section-gap) auto;
-  }
-
-  p, ol, li {
-    padding: 0;
-    margin: 0;
-  }
-
-  a {
-    display: inline-block;
-    padding-block: 0.25em;
-  }
-
-  .logo {
-    font-size: var(--fsize-1);
-    align-self: start;
-
-    a {
-      padding: 0;
-    }
-  }
-
-  hr {
-    grid-column-start: span 2;
-  }
-
-  .iconlinks {
-    font-size: var(--fsize-0);
-    display: flex;
-    flex-direction: row;
-
-    a {
-      padding-inline-end: 1em;
-    }
+  p {
+    text-align: center;
+    margin-block: 2em;
   }
 
 }
@@ -56,7 +14,7 @@
   position: fixed;
   inset-block-end: 1em;
   inset-inline-end: 1em;
-  color: var(--color-fore1);
+  color: var(--color-fore4);
   outline: 0 none;
   opacity: 0.2;
   z-index: 9;
