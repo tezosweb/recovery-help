@@ -1,0 +1,123 @@
+/* print styles */
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    font-size: 12px !important;
+    color: #000 !important;
+    background-color: #fff !important;
+    border-color: #888 !important;
+    text-decoration-color: #888 !important;
+  }
+
+  *::before,
+  *::after {
+    font-size: 10px !important;
+  }
+
+  header, footer, video, youtube-lite, .breadcrumb, #top {
+    display: none !important;
+  }
+
+  #pagegrid, main, main > * {
+    inline-size: 100% !important;
+    max-inline-size: none !important;
+    padding-inline: 0 !important;
+    margin-inline: 0 !important;
+  }
+
+  h1 { font-size: 22px !important; }
+  h2 { font-size: 18px !important; }
+  h3 { font-size: 14px !important; }
+
+  main {
+    column-width: 24em;
+    column-gap: 4em;
+    padding-block: 0 !important;
+
+    header {
+      display: block !important
+    }
+  }
+
+  th, td {
+    padding-block: 0.2em !important;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  aside, blockquote {
+    padding-inline-start: 1em !important;
+  }
+
+  .filename dfn {
+    color: #aaa !important;
+    padding: 0.1em 1em !important;
+    border: 1px solid #888 !important;
+    border-radius: 0.5em 0.5em 0 0 !important;
+
+    &::before {
+      display: none !important;
+    }
+  }
+
+  pre, code {
+    font-size: 12px !important;
+  }
+
+  h1, h2, h3 {
+    code {
+      font-size: inherit !important;
+    }
+  }
+
+  code {
+    padding: 0 !important;
+    border: 0 none !important;
+  }
+
+  pre {
+    padding-inline: 0.5em !important;
+    padding-block: 4px !important;
+    border: 1px solid #888;
+    border-radius: 3px !important;
+  }
+
+  a:link, a:visited {
+    text-decoration: none;
+  }
+
+  ::marker {
+    color: #000 !important;
+  }
+
+  nav.pagelist {
+
+    a:link, a:visited {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+  }
+
+  article, section, aside, blockquote, table, img, picture, figure, svg, li, pre, code {
+    break-inside: avoid;
+  }
+
+  h2 + *, h3 + *, .filename + pre {
+    break-before: avoid;
+  }
+
+  main a[href^="http"]:not([class])::after {
+    display: inline-block;
+    content: " (" attr(href) ")";
+    font-size: 12px !important;
+    font-style: italic;
+  }
+
+}

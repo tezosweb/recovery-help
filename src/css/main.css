@@ -2,11 +2,15 @@
 @import url('./core/reset.css') layer(reset);
 @import url('./core/variables.css');
 @import url('./core/elements.css');
+@import url('./core/tables.css');
 @import url('./core/layout.css');
 @import url('./core/utility.css');
+
 @import url('./components/header.css');
 @import url('./components/logo.css');
 @import url('./components/nav-pagelist.css');
 @import url('./components/title.css');
 @import url('./components/code.css');
 @import url('./components/footer.css');
+
+@import url('./core/print.css');
