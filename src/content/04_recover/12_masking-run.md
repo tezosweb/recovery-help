@@ -27,7 +27,7 @@ Character codes include:
 * `?s` defines a single special character that's not a letter or a digit
 * other characters are as-is (such as `ver` above)
 
-JtR uses this pattern to create a list of all possibilities, such as:
+John the Ripper uses this pattern to create a list of all possibilities, such as:
 
 ```txt
 Rover!1900AA
@@ -37,7 +37,7 @@ R0ver&2005YY
 r0ver-2099ZZ
 ```
 
-All candidates would be 12 characters because that's what the `mask` specifies. If you set `--max-length=13`, JtR repeats the last character type so, as well as testing `Rover!1900AA`, it also tests `Rover!1900AAA`, `Rover!1900AAB`, and so on.
+All candidates would be 12 characters because that's what the `mask` specifies. If you set `--max-length=13`, John the Ripper repeats the last character type so, as well as testing `Rover!1900AA`, it also tests `Rover!1900AAA`, `Rover!1900AAB`, and so on.
 
 Example command for a masking run:
 

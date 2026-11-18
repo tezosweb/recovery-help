@@ -9,6 +9,7 @@ Although flatpak versions of John the Ripper are [available for Linux](https://g
 
 {{ terminal }}
 ```bash
+# from home directory
 cd ~
 
 # install dependencies
@@ -24,34 +25,30 @@ cd john/src && ./configure && make -s clean && make -sj4
 cd ../run/ && ./john --list=build-info
 ```
 
-For the purposes of this tutorial, we'll assume you've installed JtR to `~/john` so the `~/john/run` directory provides JtR executables. You can run `john` from the terminal using the full path, e.g.
+The `~/john/run` directory contains John the Ripper executables. You can run `john` from the terminal using the full path, e.g.
 
 {{ terminal }}
 ```bash
 ~/john/run/john
 ```
 
-Alternatively, you can update your `PATH` environment variable temporarily to execute `john.exe` from anywhere:
+For the purposes of this tutorial, we presume you can run `john` from any directory without using the full path. You can temporarily update your Linux `PATH` environment variable for the current terminal session using following command:
 
 {{ terminal }}
 ```bash
-# do after opening terminal
-PATH=$PATH:~/john/run
-
-# run john from any directory
-cd ~
-john
+# temporary PATH update: run after opening terminal
+PATH=$PATH:$HOME/john/run
 ```
 
-Finally, you can permanently update your `PATH` environment variable if you want to use JtR regularly by adding a line to your `~/.bashrc` or similar shell configuration file, e.g.
+Or you can permanently update your Linux `PATH` environment variable if you intend running John the Ripper regularly by adding the following line to the bottom of your `~/.bashrc` (or similar) shell configuration file, e.g.
 
-{{ terminal }}
+{{ `.bashrc` }}
 ```bash
-# add at end of ~/.bashrc
-export PATH=$PATH:~/john/run
+# add John the Ripper
+export PATH=$PATH:$HOME/john/run
 ```
 
-This tutorial presumes you can run `john` from anywhere. Test it works:
+Close and restart your terminal then test you can run `john` from any directory:
 
 {{ terminal }}
 ```bash
@@ -62,7 +59,7 @@ john --list=build-info
 
 ## GPU support
 
-JtR communicates with your graphics card using OpenCL (Open Computing Language) -- refer to the [Linux device support list](https://opencl.gpuinfo.org/listdevices.php?platform=linux). Distros and devices vary, but you can install the latest NVIDIA drivers on Ubuntu using:
+John the Ripper communicates with your graphics card using OpenCL (Open Computing Language) -- refer to the [Linux device support list](https://opencl.gpuinfo.org/listdevices.php?platform=linux). Distros and devices vary, but you can install the latest NVIDIA drivers on Ubuntu using:
 
 {{ terminal }}
 ```bash
@@ -74,7 +71,7 @@ sudo apt install -y nvidia-opencl-dev clinfo
 
 Linux drivers for AMD graphics cards are available from [amd.com](https://www.amd.com/en/support/download/linux-drivers.html).
 
-Check whether JtR can access your GPUs:
+Check whether John the Ripper can access your GPUs:
 
 {{ terminal }}
 ```bash

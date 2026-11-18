@@ -5,7 +5,7 @@ menu: Generic options
 date: 2026-12-01
 ---
 
-Start John the Ripper from your working directory using the command:
+The general command for starting John the Ripper is:
 
 ```bash
 john [options] hash.txt
@@ -17,14 +17,18 @@ where:
 
 * `hash.txt` is your [generated `hash.txt` file](__/install/generate-hash/).
 
-You can view help with `john --help`, but this section provides guidance.
-
 The following John the Ripper command-line options are available no matter which [recovery strategy](__/recover/) you use.
 
 
 ## Use your GPU
 
-If you have a supported OpenCL graphics card (see output of `john --list=opencl-devices`), adding the `--format=tezos-opencl` option to the `john` command increases performance by offloading processing to the GPU.
+If you have a supported OpenCL graphics card (see output of `john --list=opencl-devices`), adding a `--format=tezos-opencl` option to the `john` command increases performance by offloading processing to the GPU:
+
+{{ terminal }}
+```bash
+# use GPU
+john --format=tezos-opencl hash.txt
+```
 
 If your PC has more than one graphics card, you can target a specific device or devices using a comma-delimited list, e.g. `--devices=1` or `--devices=1,3`. Device 1 is the first GPU shown in the output of `john --list=opencl-devices`.
 
@@ -32,6 +36,12 @@ If your PC has more than one graphics card, you can target a specific device or 
 ## Disabling logs
 
 As John the Ripper runs, it outputs a large log to `john.log`. The log is not useful to users, so disable it using the `--no-log` option.
+
+{{ terminal }}
+```bash
+# disable log
+john --no-log hash.txt
+```
 
 
 ## Limiting characters
@@ -42,31 +52,51 @@ Setting character limits can cut processing time. Use:
 * `--min-length=N` to set a minimum number of characters, e.g. `--min-length=10`
 * `--max-length=N` to set a maximum number of characters, e.g. `--max-length=15`
 
-You can set both `--min-length` and `--max-length`.
+You can set both `--min-length` and `--max-length`, e.g.
 
+{{ terminal }}
+```bash
+# look for 10, 11, or 12-character passwords
+john --min-length=10 --max-length=12 hash.txt
+```
 
 ## Set a recovery file name
 
-JtR creates a `john.pot` file in its `run` directory when it starts processing. The file has no content until it recovers your password and processing ends. You can change the recovery file location using the `--pot` option, e.g. set `--pot=tezos.pot` to create a `tezos.pot` file in the working directory.
+John the Ripper creates a [`john.pot` password recovery file](__/recover/recovery-file/) in its `run` directory when it starts processing. The file has no content until it recovers your password and processing ends.
+
+You can change the recovery file location using the `--pot` option, e.g. set `--pot=tezos.pot` to create a `tezos.pot` file in the working directory.
+
+{{ terminal }}
+```bash
+# set recovery file name
+john --pot=tezos.pot hash.txt
+```
 
 
 ## Saving sessions
 
-John the Ripper can run for a long time and use significant CPU and/or GPU time. It can save progress to a `.rec` file so you can stop and restore a recovery session without having to restart processing from scratch. This is useful when you want to run John the Ripper when you're not using your device.
+John the Ripper can run for a long time and use significant CPU and/or GPU time. It can save progress to a `.rec` file so you can stop and restore a recovery session without having to restart processing from scratch. This is useful when you want to run John the Ripper at times you're not using your device.
 
-To save session progress, set the `--session=NAME` option, e.g. `--session=tezos`. A `tezos.rec` file is then created in your working directory.
-
-You can examine the status of a running process with:
+To save session progress, set the `--session=NAME` option, e.g. `--session=tezos`:
 
 {{ terminal }}
 ```bash
+# save session progress
+john --session=tezos hash.txt
+```
+
+This creates a `tezos.rec` file in your working directory. You can examine the status of a running process in another terminal:
+
+{{ terminal }}
+```bash
+# show session status
 john --status=tezos
 ```
 
 
 ## Restoring sessions
 
-If you stop a session by pressing <kbd>q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>, you can restart it again using:
+When you stop a session by pressing <kbd>q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>, you can restart it again using:
 
 {{ terminal }}
 ```bash
@@ -76,7 +106,7 @@ john --restore=tezos
 
 ## Full example command
 
-From your `tezos` working directory, you can [start a quick run](__/recover/quick-run/) on a GPU, without logs, using a session named `tezos`, looking for a password between 7 and 9 characters that's stored in `tezos.pot` and uses your `hash.txt` file:
+From your `tezos` working directory, you can [start a quick run](__/recover/quick-run/) on a GPU, without logs, using a session named `tezos`, looking for a password between 7 and 9 characters that will be stored in `tezos.pot` using your `hash.txt` file:
 
 {{ terminal }}
 ```bash
@@ -88,7 +118,7 @@ john --format=tezos-opencl --no-log --session=tezos --min-length=7 --max-length=
 Press space to show the current status, e.g.
 
 ```txt
-0g 0:00:00:22 0.01% 2/3 (ETA: 2026-05-18 07:04) 0g/s 21937p/s 21937c/s 21937C/s goodday12..291052
+0g 0:00:00:22 0.01% 2/3 (ETA: 2026-12-31 01:23) 0g/s 200000p/s 200000c/s 200000C/s goodday12..291052
 ```
 
 It shows the:
@@ -96,8 +126,9 @@ It shows the:
 * total processing time
 * percentage complete
 * processing step
-* estimated time of completion, and
-* information about the number of password checks per second.
+* estimated time of completion
+* information about the number of password checks per second, and
+* the current password being checked.
 
 To stop processing, press <kbd>q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>. You can continue processing later by entering:
 

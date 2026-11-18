@@ -5,7 +5,9 @@ menu: Recovery file
 date: 2026-12-01
 ---
 
-JtR creates a `john.pot` file in its `run` directory when it starts processing. The file has no content until it recovers your password and processing ends. The command line examples in this tutorial set `--pot=tezos.pot` to output it to `tezos.pot` in the working directory.
+John the Ripper creates a `john.pot` file in its `run` directory when it starts processing. The file has no content until it recovers your password and processing ends.
+
+The command line examples in this tutorial set `--pot=tezos.pot` to output it to `tezos.pot` in the working directory.
 
 On recovery, the `tezos.pot` file has the same content as [your `hash.txt` file](__/install/generate-hash/), followed by a colon (`:`) and your password. For example:
 
@@ -20,6 +22,6 @@ In this case, the recovered password is `Password123`.
 
 Once recovered:
 
-1. Record your password in a secure place, such as a password manager.
+1. Record your password in a secure place such as a password manager.
 1. Delete or move your `hash.txt` and `tezos.pot` files to a secure location.
 1. If you do not require John the Ripper again, delete its directory and `PATH` environment variable.

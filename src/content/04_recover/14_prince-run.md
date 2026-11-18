@@ -40,14 +40,16 @@ You can use wordlist generators to create password candidate files from a smalle
 
 Include your known capitalization and symbol replacements then save these to a file in your working directory named `wordpart.txt`. Remove all blank and duplicate lines then sort the strings into ascending ASCII order using an editor or tool:
 
-* VS Code: <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> then enter and choose `Sort Lines Ascending`
-* Sublime Text: select all lines, then Edit > Sort Lines
-* Notepad++: Edit > Line Operations > Sort Lines Lexicographically Ascending
-* gedit: select all lines, then Tools > Sort...
-* vi: `:!sort`
-* emacs: `M-x mark-whole-buffer` followed by `M-x sort-lines`
-* Linux/macOS terminal: `sort wordpart.txt > wordpart-sorted.txt`
-* or an [online tool](https://www.textfixer.com/tools/sort-lines-alphabetically-online.php).
+|text editor|line sort option|
+|-|-|
+|**VS Code**|<kbd>Ctrl</kbd> \| <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> then enter and choose `Sort Lines Ascending`|
+|**Sublime Text**|select all lines, then Edit > Sort Lines|
+|**Notepad++**|menu: Edit > Line Operations > Sort Lines Lexicographically Ascending|
+|**gedit**|select all lines, then Tools > Sort...|
+|**vi**|`:!sort`|
+|**emacs**|`M-x mark-whole-buffer` followed by `M-x sort-lines`|
+|**Linux/macOS terminal**|`sort wordpart.txt > wordpart-sorted.txt`|
+|**online tool**|[Text Fixer](https://www.textfixer.com/tools/sort-lines-alphabetically-online.php)|
 
 Pass the file to `john` using the `--prince` option as well as `--prince-elem-cnt-max` to set the maximum number of string combinations:
 
@@ -66,7 +68,7 @@ CHRIS123!$bob
 1231967$!
 ```
 
-A 300-line wordlist with up 4 combinations typically takes a couple of days to process. Increasing it to 5 exponentially increases the number of candidates and processing could take weeks.
+A 300-line wordlist with up 4 combinations typically takes a couple of days to process on a modern PC with a supported GPU. Increasing it to 5 exponentially increases the number of candidates and processing could take several weeks.
 
 Add [generic options](__/recover/generic-options/) when possible to use the GPU, disable logs, save the session, set password lengths, and output a recovery file e.g.
 

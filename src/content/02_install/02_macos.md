@@ -9,10 +9,11 @@ Precompiled versions of John the Ripper are [available for macOS](https://github
 
 {{ terminal }}
 ```bash
+# from home directory
 cd ~
 
 # install dependencies
-brew install openssl libomp gmp zlib
+brew install git openssl libomp gmp zlib
 
 # clone latest bleeding-jumbo repository
 git clone https://github.com/openwall/john -b bleeding-jumbo
@@ -28,34 +29,30 @@ make -sj$(sysctl -n hw.ncpu)
 cd ../run/ && ./john --list=build-info
 ```
 
-For the purposes of this tutorial, we'll assume you've installed JtR to `~/john` so the `~/john/run` directory provides JtR executables. You can run `john` from the terminal using the full path, e.g.
+The `~/john/run` directory contains John the Ripper executables. You can run `john` from the terminal using the full path, e.g.
 
 {{ terminal }}
 ```bash
 ~/john/run/john
 ```
 
-Alternatively, you can update your `PATH` environment variable temporarily to execute `john.exe` from anywhere:
+For the purposes of this tutorial, we presume you can run `john` from any directory without using the full path. You can temporarily update your macOS `PATH` environment variable for the current terminal session using following command:
 
 {{ terminal }}
 ```bash
-# do after opening terminal
-PATH=$PATH:~/john/run
-
-# run john from any directory
-cd ~
-john
+# temporary PATH update: run after opening terminal
+PATH=$PATH:$HOME/john/run
 ```
 
-Finally, you can permanently update your `PATH` environment variable if you want to use JtR regularly by adding a line to your `~/.bash_profile` shell configuration file, e.g.
+Or you can permanently update your macOS `PATH` environment variable if you intend running John the Ripper regularly by adding the following line to the bottom of your `~/.bash_profile` shell configuration file, e.g.
 
-{{ terminal }}
+{{ `.bash_profile` }}
 ```bash
-# add at end of ~/.bash_profile
-export PATH=$PATH:~/john/run
+# add John the Ripper
+export PATH=$PATH:$HOME/john/run
 ```
 
-This tutorial presumes you can run `john` from anywhere. Test it works:
+Close and restart your terminal then test you can run `john` from any directory:
 
 {{ terminal }}
 ```bash
@@ -66,9 +63,9 @@ john --list=build-info
 
 ## GPU support
 
-JtR communicates with your graphics card using OpenCL (Open Computing Language). Apple M chips support OpenCL so there should be nothing to install or configure.
+John the Ripper communicates with your graphics card using OpenCL (Open Computing Language). Apple M chips support OpenCL so there should be nothing to install or configure.
 
-Check whether JtR can access your GPUs:
+Check whether John the Ripper can access your GPUs:
 
 {{ terminal }}
 ```bash

@@ -36,7 +36,7 @@ Save these to a file in your working directory named `wordlist.txt` and pass it 
 john --wordlist=wordlist.txt hash.txt
 ```
 
-On its own, JtR will examine those 10 words for an exact match. Adding the `--rules` option mutates all words by adding capitalization, making symbol replacements, duplicating words, and appending common letters, symbols, or digits.
+On its own, John the Ripper will examine each word for an exact match. Adding the `--rules` option mutates all words by adding capitalization, symbol replacements, duplications, and appending common letters, symbols, or digits.
 
 {{ terminal }}
 ```bash

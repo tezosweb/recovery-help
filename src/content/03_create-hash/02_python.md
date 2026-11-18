@@ -9,7 +9,7 @@ John the Ripper provides a `tezos2john.py` Python script in its `run` directory 
 
 > If you do not have Python installed, you can use [tezos2john.html](__/create-hash/tezos2john.html) or [Docker](__/create-hash/docker/) instead.
 >
-> Windows and macOS users can also use WSL2 or a Linux virtual machine that has Python installed. Copy `tezos2john.py` and the `bip-0039` subdirectory from the JtR `run` directory into the VM then run it using the command below.
+> Windows and macOS users can also use WSL2 or a Linux virtual machine that has Python installed. Copy `tezos2john.py` and the `bip-0039` subdirectory from the John the Ripper `run` directory into the VM then run it using the command below.
 
 The Python command format:
 
