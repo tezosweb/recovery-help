@@ -1,6 +1,6 @@
 ---
 title: John the Ripper quick run
-description: A quick run can find simpler passwords using your name and common strings such as "password", "qwerty", and "123456".
+description: A quick run can find simpler passwords using your name and common strings such as 'password', 'qwerty', and '123456'.
 menu: Quick run
 date: 2026-12-01
 ---
