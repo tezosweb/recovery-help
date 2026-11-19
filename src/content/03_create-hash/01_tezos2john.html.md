@@ -1,6 +1,6 @@
 ---
 title: Create your Tezos hash.txt file using tezos2john.html
-description: Create a John the Ripper hash.txt file using the tezos2john.html from this site that works on all devices.
+description: Create a John the Ripper hash.txt file using an HTML page that works on all devices without other software.
 menu: tezos2john.html
 date: 2026-12-01
 ---
@@ -35,14 +35,16 @@ or Linux:
 sha256sum tezos2john.html
 ```
 
-Then double-click `tezos2john.html` to open it in your default browser. The `hash.txt` file content appears after you enter your:
+Then double-click `tezos2john.html` to open it in your default browser.
+
+> Your browser runs this page in a secure, local, sandboxed tab with no internet access.
+
+The `hash.txt` file content appears once you enter your:
 
 1. 15 seed words
 1. email address (in the letter case you provided)
 1. public address (36-character code starting `tz1`)
 
-> Note: your browser runs this page in a local, sandboxed context and it has no access to the internet.
-
-Save the file and move it to your working directory such as `C:\tezos` on Windows or `~/tezos` on Linux or macOS.
+Save the file and move it to a working directory such as `C:\tezos` on Windows or `~/tezos` on Linux or macOS.
 
 You can now **[start password recovery with John the Ripper...](__/recover/)**

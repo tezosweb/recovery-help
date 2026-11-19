@@ -14,7 +14,7 @@ Start a quick run without any specific options, `cd` to your working directory a
 john hash.txt
 ```
 
-Add [generic options](__/recover/generic-options/) when possible to use the GPU, disable logs, save the session, set password lengths, and output a recovery file e.g.
+Add [generic options](__/recover/generic-options/) when possible to use the GPU, disable logs, start a session, set password lengths, and output a recovery file e.g.
 
 {{ terminal }}
 ```bash

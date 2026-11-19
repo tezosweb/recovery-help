@@ -36,7 +36,7 @@ Save these to a file in your working directory named `wordlist.txt` and pass it 
 john --wordlist=wordlist.txt hash.txt
 ```
 
-On its own, John the Ripper will examine each word for an exact match. Adding the `--rules` option mutates all words by adding capitalization, symbol replacements, duplications, and appending common letters, symbols, or digits.
+On its own, John the Ripper will examine every word for an **exact match**. Adding the `--rules` option mutates all words using capitalizations, symbol replacements, duplications, and appending common letters, symbols, and digits.
 
 {{ terminal }}
 ```bash
@@ -59,7 +59,7 @@ BOB!
 bobbob
 ```
 
-Add [generic options](__/recover/generic-options/) when possible to use the GPU, disable logs, save the session, set password lengths, and output a recovery file e.g.
+Add [generic options](__/recover/generic-options/) when possible to use the GPU, disable logs, start a session, set password lengths, and output a recovery file e.g.
 
 {{ terminal }}
 ```bash

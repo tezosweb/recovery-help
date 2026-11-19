@@ -13,4 +13,4 @@ To start Tezos password recovery, you must:
 
 1. [Start John the Ripper](__/recover/) using one or more recovery strategies.
 
-We recommend you view the topics in this section before starting.
+We recommend you [view the topics](__/overview/recovery-chances/) in this section before starting.

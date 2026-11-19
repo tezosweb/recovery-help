@@ -13,7 +13,7 @@ To attempt Tezos password recovery, you require:
 
    Your PC could be running intensive processes for many weeks. If you do not have a dedicated device, use your main PC but schedule recovery runs at times you're not using it, such as evenings, weekends, vacations, etc.
 
-   IMPORTANT! Check your device's power options to ensure it will not sleep after a period of user inactivity.
+   > IMPORTANT! Check your device's power options to ensure it will not sleep after a period of user inactivity.
 
 1. The technical ability to install software and run command-line tools.
 
@@ -25,6 +25,6 @@ To attempt Tezos password recovery, you require:
 
 1. Some password hints. The better your hints, the better your chances of password recovery.
 
-> Note: you can run password recovery tools in Windows WSL2, a virtual machine, or Docker container, but these are not the fastest options and require configuration to use the host's GPU. This tutorial recommends a bare-metal installation.
+> Note: you can run password recovery tools in Windows WSL2, a virtual machine, or Docker container. These are not the fastest options and require configuration to use the host's GPU. This tutorial recommends a bare-metal installation.
 
 Next: **[consider security...](__/overview/security/)**

@@ -1,6 +1,6 @@
 ---
 title: Windows installation
-description: How to install John the Ripper and other software components on Windows.
+description: How to install John the Ripper and its dependencies on Windows.
 menu: Windows
 date: 2026-12-01
 ---
@@ -16,7 +16,7 @@ The `C:\JtR\run` directory contains John the Ripper executables. You can run `jo
 C:\JtR\run\john
 ```
 
-For the purposes of this tutorial, we presume you can run `john` from any folder without using the full path. You can temporarily update your Windows `PATH` environment variable  for the current terminal session using following command:
+For the purposes of this tutorial, we presume you can run `john` from any folder without using the full path. You can temporarily update your Windows `PATH` environment variable  for the current terminal session using the command:
 
 {{ terminal }}
 ```bash

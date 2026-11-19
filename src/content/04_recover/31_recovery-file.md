@@ -5,7 +5,7 @@ menu: Recovery file
 date: 2026-12-01
 ---
 
-John the Ripper creates a `john.pot` file in its `run` directory when it starts processing. The file has no content until it recovers your password and processing ends.
+John the Ripper creates a `john.pot` file in its `run` directory when it starts processing. The file has no content until your password is recovered and processing ends.
 
 The command line examples in this tutorial set `--pot=tezos.pot` to output it to `tezos.pot` in the working directory.
 

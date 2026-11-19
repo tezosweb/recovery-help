@@ -9,9 +9,9 @@ This section provides strategies for running John the Ripper depending what you 
 
 1. installed John the Ripper and any necessary GPU drivers on [Windows](__/install/windows/), [macOS](__/install/macos/), or [Linux](__/install/linux/)
 
-1. created a `tezos` working directory
+1. created a `tezos` working directory such as `C:\tezos` on Windows or `~/tezos` on Linux or Mac OS
 
-1. [generated your `hash.txt` file](__/install/generate-hash/) and copied it to your working directory.
+1. [generated your `hash.txt` file](__/install/generate-hash/) and copied it to your working directory
 
 In your terminal, `cd` to your `tezos` working directory. The general command for starting John the Ripper is:
 

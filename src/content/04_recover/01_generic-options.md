@@ -62,7 +62,7 @@ john --min-length=10 --max-length=12 hash.txt
 
 ## Set a recovery file name
 
-John the Ripper creates a [`john.pot` password recovery file](__/recover/recovery-file/) in its `run` directory when it starts processing. The file has no content until it recovers your password and processing ends.
+John the Ripper creates a [`john.pot` password recovery file](__/recover/recovery-file/) in its `run` directory when it starts processing. The file has no content until your password is recovered and processing ends.
 
 You can change the recovery file location using the `--pot` option, e.g. set `--pot=tezos.pot` to create a `tezos.pot` file in the working directory.
 
@@ -75,7 +75,7 @@ john --pot=tezos.pot hash.txt
 
 ## Saving sessions
 
-John the Ripper can run for a long time and use significant CPU and/or GPU time. It can save progress to a `.rec` file so you can stop and restore a recovery session without having to restart processing from scratch. This is useful when you want to run John the Ripper at times you're not using your device.
+John the Ripper can run for a long time and use significant CPU and/or GPU time. It can save progress to a `.rec` file so you can stop and restore a recovery session without having to start processing from scratch. This is useful when you want to run John the Ripper at times you're not using your device.
 
 To save session progress, set the `--session=NAME` option, e.g. `--session=tezos`:
 
@@ -85,7 +85,7 @@ To save session progress, set the `--session=NAME` option, e.g. `--session=tezos
 john --session=tezos hash.txt
 ```
 
-This creates a `tezos.rec` file in your working directory. You can examine the status of a running process in another terminal:
+This creates a `tezos.rec` file in your working directory. You can examine the status of a running process in another terminal window:
 
 {{ terminal }}
 ```bash
@@ -96,7 +96,7 @@ john --status=tezos
 
 ## Restoring sessions
 
-When you stop a session by pressing <kbd>q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>, you can restart it again using:
+When you stop a session by pressing <kbd>q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>, you can continue a saved session using:
 
 {{ terminal }}
 ```bash
@@ -106,7 +106,7 @@ john --restore=tezos
 
 ## Full example command
 
-From your `tezos` working directory, you can [start a quick run](__/recover/quick-run/) on a GPU, without logs, using a session named `tezos`, looking for a password between 7 and 9 characters that will be stored in `tezos.pot` using your `hash.txt` file:
+From your `tezos` working directory, [start a quick run](__/recover/quick-run/) on a GPU, without logs, starting a session named `tezos`, looking for a password between 7 and 9 characters that is stored in `tezos.pot` when it's recovered:
 
 {{ terminal }}
 ```bash
@@ -130,11 +130,11 @@ It shows the:
 * information about the number of password checks per second, and
 * the current password being checked.
 
-To stop processing, press <kbd>q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>. You can continue processing later by entering:
+To stop processing, press <kbd>q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>. Continue processing later by entering:
 
 {{ terminal }}
 ```bash
 john --restore=tezos
 ```
 
-The command above starts **[a quick run...](__/recover/quick-run/)**
+The full command shown above starts **[a quick run...](__/recover/quick-run/)**

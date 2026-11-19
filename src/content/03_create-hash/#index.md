@@ -11,7 +11,7 @@ John the Ripper requires a Tezos password `hash.txt` file before it can attempt 
 1. Your email address (in the letter case you provided)
 1. Your public address (36-character code starting `tz1`)
 
-The file contains these values and a generated hash in text format on a single line, e.g.
+`hash.txt` contains these values and a generated hash on a single line, e.g.
 
 {{ `hashes.txt` example }}
 ```txt

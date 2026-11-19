@@ -1,6 +1,6 @@
 ---
 title: Linux installation
-description: How to install John the Ripper and other software components on Linux.
+description: How to install John the Ripper and its dependencies on Linux.
 menu: Linux
 date: 2026-12-01
 ---
@@ -32,7 +32,7 @@ The `~/john/run` directory contains John the Ripper executables. You can run `jo
 ~/john/run/john
 ```
 
-For the purposes of this tutorial, we presume you can run `john` from any directory without using the full path. You can temporarily update your Linux `PATH` environment variable for the current terminal session using following command:
+For the purposes of this tutorial, we presume you can run `john` from any directory without using the full path. You can temporarily update your Linux `PATH` environment variable for the current terminal session using the command:
 
 {{ terminal }}
 ```bash

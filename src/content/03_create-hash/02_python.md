@@ -5,11 +5,11 @@ menu: Python
 date: 2026-12-01
 ---
 
-John the Ripper provides a `tezos2john.py` Python script in its `run` directory that generates the `hash.txt` file. Some Linux distros provide Python by default and downloads are available for [Windows](https://www.python.org/downloads/windows/) and [macOS](https://www.python.org/downloads/macos/).
+John the Ripper provides a `tezos2john.py` Python script in its `run` directory that can generate your Tezos password `hash.txt` file. Some Linux distros provide Python by default and downloads are available for [Windows](https://www.python.org/downloads/windows/) and [macOS](https://www.python.org/downloads/macos/).
 
 > If you do not have Python installed, you can use [tezos2john.html](__/create-hash/tezos2john.html) or [Docker](__/create-hash/docker/) instead.
 >
-> Windows and macOS users can also use WSL2 or a Linux virtual machine that has Python installed. Copy `tezos2john.py` and the `bip-0039` subdirectory from the John the Ripper `run` directory into the VM then run it using the command below.
+> Windows and macOS users can also use WSL2 or a Linux virtual machine that has Python installed. Copy `tezos2john.py` and the `bip-0039` subdirectory from the John the Ripper `run` directory to the VM then run it using the command below.
 
 The Python command format:
 
@@ -22,9 +22,9 @@ Steps:
 
 1. Create a working directory such as `C:\tezos` on Windows or `~/tezos` on Linux or macOS.
 
-1. `cd` to the John the Ripper `run` directory.
+1. Enter the John the Ripper `run` directory: `cd ~/john/run`
 
-1. Run this command on Linux or macOS, replacing the seed words, email, tz address, and `hash.txt` file location as necessary:
+1. Run this command on Linux or macOS, replacing the seed words, email, tz1 address, and `hash.txt` file location as necessary:
 
     {{ terminal }}
     ```bash

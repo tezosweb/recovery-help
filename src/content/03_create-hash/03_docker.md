@@ -5,15 +5,15 @@ menu: Docker
 date: 2026-12-01
 ---
 
-If you do not have Python installed but do have [Docker](https://www.docker.com/), you can run it using a minimal Python image. Docker Desktop is available for [Windows](https://docs.docker.com/desktop/setup/install/windows-install/), [macOS](https://docs.docker.com/desktop/setup/install/mac-install/), and [Linux](https://docs.docker.com/desktop/setup/install/linux/).
+If you do not have Python but do have [Docker Desktop](https://www.docker.com/) installed, you can generate your Tezos password `hash.txt` file in a minimal Python container.
 
-Once you have installed Docker Desktop:
+Docker Desktop is available for [Windows](https://docs.docker.com/desktop/setup/install/windows-install/), [macOS](https://docs.docker.com/desktop/setup/install/mac-install/), and [Linux](https://docs.docker.com/desktop/setup/install/linux/). Once you have installed Docker Desktop:
 
 1. Create a working directory such as `C:\tezos` on Windows or `~/tezos` on Linux or Mac OS.
 
-1. `cd` to the John the Ripper `run` directory.
+1. Enter the John the Ripper `run` directory: `cd ~/john/run`
 
-1. Run the following `docker` command on Linux or macOS, replacing the seed words, email, tz address, and `hash.txt` file location as necessary:
+1. Run the following `docker` command on Linux or macOS, replacing the seed words, email, tz1 address, and `hash.txt` file location as necessary:
 
     {{ terminal }}
     ```bash

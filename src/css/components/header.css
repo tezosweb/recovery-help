@@ -70,16 +70,6 @@
       transition: none;
     }
 
-    svg {
-      color: var(--color-fore3);
-    }
-
-    &:open, &:hover, &:focus, &:active, &:focus-within {
-      summary svg {
-        color: var(--color-fore5);
-      }
-    }
-
     summary {
 
       &::before {

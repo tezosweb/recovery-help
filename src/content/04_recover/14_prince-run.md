@@ -70,7 +70,7 @@ CHRIS123!$bob
 
 A 300-line wordlist with up 4 combinations typically takes a couple of days to process on a modern PC with a supported GPU. Increasing it to 5 exponentially increases the number of candidates and processing could take several weeks.
 
-Add [generic options](__/recover/generic-options/) when possible to use the GPU, disable logs, save the session, set password lengths, and output a recovery file e.g.
+Add [generic options](__/recover/generic-options/) when possible to use the GPU, disable logs, start a session, set password lengths, and output a recovery file e.g.
 
 {{ terminal }}
 ```bash
