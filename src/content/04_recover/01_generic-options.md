@@ -15,7 +15,7 @@ where:
 
 * `[options]` is one or more command-line settings for the [recovery strategy](__/recover/) you're using plus any generic options shown below.
 
-* `hash.txt` is your [generated `hash.txt` file](__/install/generate-hash/).
+* `hash.txt` is your [generated `hash.txt` file](__/create-hash/).
 
 The following John the Ripper command-line options are available no matter which [recovery strategy](__/recover/) you use.
 

@@ -9,7 +9,7 @@ John the Ripper creates a `john.pot` file in its `run` directory when it starts 
 
 The command line examples in this tutorial set `--pot=tezos.pot` to output it to `tezos.pot` in the working directory.
 
-On recovery, the `tezos.pot` file has the same content as [your `hash.txt` file](__/install/generate-hash/), followed by a colon (`:`) and your password. For example:
+On recovery, the `tezos.pot` file has the same content as [your `hash.txt` file](__/create-hash/), followed by a colon (`:`) and your password. For example:
 
 {{ `tezos.pot` example }}
 ```txt

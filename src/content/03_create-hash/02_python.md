@@ -7,7 +7,7 @@ date: 2026-12-01
 
 John the Ripper provides a `tezos2john.py` Python script in its `run` directory that can generate your Tezos password `hash.txt` file. Some Linux distros provide Python by default and downloads are available for [Windows](https://www.python.org/downloads/windows/) and [macOS](https://www.python.org/downloads/macos/).
 
-> If you do not have Python installed, you can use [tezos2john.html](__/create-hash/tezos2john.html) or [Docker](__/create-hash/docker/) instead.
+> If you do not have Python installed, you can use [tezos2john.html](__/create-hash/tezos2john.html/) or [Docker](__/create-hash/docker/) instead.
 >
 > Windows and macOS users can also use WSL2 or a Linux virtual machine that has Python installed. Copy `tezos2john.py` and the `bip-0039` subdirectory from the John the Ripper `run` directory to the VM then run it using the command below.
 
