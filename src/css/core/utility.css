@@ -21,8 +21,8 @@ button, a.button {
   padding: 0.5em 1em;
   margin-inline: auto;
   margin-block: 2em;
-  color: var(--color-fore3);
-  border: 1px solid var(--color-fore4);
+  color: var(--color-fore5);
+  border: 1px solid var(--color-fore5);
   background-color: transparent;
   border-radius: 5px;
 

@@ -96,7 +96,7 @@ john --status=tezos
 
 ## Restoring sessions
 
-When you stop a session by pressing <kbd>q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>, you can continue a saved session using:
+When you stop a session by pressing <kbd>Q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>, you can continue a saved session using:
 
 {{ terminal }}
 ```bash
@@ -130,7 +130,7 @@ It shows the:
 * information about the number of password checks per second, and
 * the current password being checked.
 
-To stop processing, press <kbd>q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>. Continue processing later by entering:
+To stop processing, press <kbd>Q</kbd> or <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd>. Continue processing later by entering:
 
 {{ terminal }}
 ```bash

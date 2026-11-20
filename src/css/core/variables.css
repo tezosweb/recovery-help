@@ -21,23 +21,24 @@
   --fsize-5: 44px;
 
   /* layout */
-  --main-width-max: 74ch;
+  --main-width-max: 85ch;
   --margin-width: min(4vi, 4ch);
   --header-height: 6ch;
+  --main-padding: min(4vi, 4ch);
   --list-indent: 2ch;
 
   /* colors */
-  --hue-main: 259;
-  --c0: oklch(0.23 0.03 var(--hue-main));
-  --c1: oklch(0.29 0.09 var(--hue-main));
-  --c2: oklch(0.35 0.15 var(--hue-main));
-  --c3: oklch(0.41 0.21 var(--hue-main));
-  --c4: oklch(0.47 0.28 var(--hue-main));
-  --c5: oklch(0.99 0.03 var(--hue-main));
-  --c6: oklch(0.93 0.09 var(--hue-main));
-  --c7: oklch(0.87 0.15 var(--hue-main));
-  --c8: oklch(0.81 0.21 var(--hue-main));
-  --c9: oklch(0.74 0.28 var(--hue-main));
+  --c0: oklch(0.18 0.01 270.6);
+  --c1: oklch(0.3 0.02 270.57);
+  --c2: oklch(0.22 0.02 270.45);
+  --c3: oklch(0.26 0.03 271.27);
+  --c4: oklch(0.566 0.213 259.196);
+
+  --c5: oklch(0.97 0.01 274.97);
+  --c6: oklch(0.92 0.01 271.32);
+  --c7: oklch(1 0 0);
+  --c8: oklch(0.96 0.01 266.7);
+  --c9: oklch(0.688 0.167 255.8);
 
   --color-back1: light-dark( var(--c5), var(--c0) );
   --color-back2: light-dark( var(--c6), var(--c1) );
@@ -56,11 +57,12 @@
 
   /* shadow */
   --color-shad1: rgba(0,0,0,0.1);
+  --color-shad2: rgba(0,0,0,0.2);
 
   /* code theme */
   --color-code-fore:      var(--color-fore2);
   --color-code-back:      var(--color-back2);
-  --color-code-border:    var(--color-back5);
+  --color-code-border:    var(--color-shad1);
 
 }
 

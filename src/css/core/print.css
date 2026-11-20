@@ -25,6 +25,7 @@
     max-inline-size: none !important;
     padding-inline: 0 !important;
     margin-inline: 0 !important;
+    border: 0 none !important;
   }
 
   h1 { font-size: 22px !important; }
@@ -82,7 +83,7 @@
   pre {
     padding-inline: 0.5em !important;
     padding-block: 4px !important;
-    border: 1px solid #888;
+    border: 1px solid #888 !important;
     border-radius: 3px !important;
   }
 
@@ -109,7 +110,7 @@
     break-inside: avoid;
   }
 
-  h2 + *, h3 + *, .filename + pre {
+  h2 + *, h3 + *, * + pre {
     break-before: avoid;
   }
 

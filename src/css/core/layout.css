@@ -8,5 +8,9 @@
 }
 
 main {
-  padding-block: 3em;
+  padding: var(--main-padding);
+  margin-block: 1.5em;
+  background-color: var(--color-back3);
+  border: 1px solid var(--color-back2);
+  border-radius: 1em;
 }

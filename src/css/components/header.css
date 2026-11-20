@@ -5,8 +5,7 @@
   inline-size: 100%;
   padding-block-start: 0.5em;
   background-color: var(--color-back1);
-  border-block-end: 1px solid var(--color-back3);
-  box-shadow: 0 1px 1px var(--color-shad1);
+  border-block-end: 1px solid var(--color-back2);
   z-index: 2;
   view-transition-name: none;
 
@@ -38,9 +37,12 @@
   }
 
   .title {
-    text-align: center;
+    font-size: 1.2em;
+    font-weight: var(--font-weight-normal);
     line-height: 0.95;
+    text-align: center;
     margin-inline: auto;
+
   }
 
   & > menu {
@@ -50,11 +52,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: min(4vi, 4ch);
 
     li > * {
       display: block;
-      padding: 0.5em;
+      padding-block: 0.5em;
     }
 
     strong {
@@ -86,7 +88,7 @@
       inset-inline-end: 0;
       padding: 0.5em 0;
       background-color: var(--color-back1);
-      border: 1px solid var(--color-back3);
+      border: 1px solid var(--color-back2);
       box-shadow: 0 5px 10px var(--color-shad1);
       overflow-block: auto;
       overscroll-behavior: contain;
@@ -146,15 +148,15 @@
   }
 
   svg {
-    color: var(--color-fore3);
+    color: var(--color-fore5);
   }
 
   svg:hover, svg:focus, svg:active {
-    color: var(--color-fore5);
+    color: var(--color-fore1);
   }
 
   &:focus-within * {
-    color: var(--color-fore5);
+    color: var(--color-fore1);
   }
 
 }

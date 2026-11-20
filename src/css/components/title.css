@@ -10,7 +10,7 @@ main header {
 
   p {
     margin-block: 0;
-    color: var(--color-fore4);
+    color: var(--color-fore2);
   }
 
   p.meta {

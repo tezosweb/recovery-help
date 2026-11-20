@@ -7,6 +7,8 @@ date: 2026-12-01
 
 A pre-compiled version of John the Ripper is available for Windows from [github.com/openwall/john-packages/releases/latest](https://github.com/openwall/john-packages/releases/latest)
 
+<youtube-lite video="5BdRwiRDq9g"></youtube-lite>
+
 Download and extract the file named `winX64_1_JtR.zip`. For the purposes of this tutorial, we'll assume you've extracted it to `C:\JtR`.
 
 The `C:\JtR\run` directory contains John the Ripper executables. You can run `john.exe` from Powershell using the full path, e.g.
@@ -68,7 +70,5 @@ You will either see a list of devices or an error such as *"Error: No OpenCL-cap
 ```bash
 john --test --format=tezos-opencl
 ```
-
-<youtube-lite video="5BdRwiRDq9g"></youtube-lite>
 
 You can now **[create your Tezos password `hash.txt` file...](__/create-hash/)**

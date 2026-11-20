@@ -18,8 +18,9 @@
     display: block;
     text-decoration: none;
     padding: var(--list-indent);
+    background-color: var(--color-back1);
     border: 2px solid var(--color-back2);
-    border-radius: 1em;
+    border-radius: 0.8em;
     margin-block-start: 1.5em;
   }
 

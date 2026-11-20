@@ -11,9 +11,9 @@ To attempt Tezos password recovery, you require:
 
    Ideally, use a fast device with one or more OpenCL-compatible graphics cards such as those [supplied by NVIDIA, AMD, and Intel](https://opencl.gpuinfo.org/listdevices.php) or Apple M chipsets.
 
-   Your PC could be running intensive processes for many weeks. If you do not have a dedicated device, use your main PC but schedule recovery runs at times you're not using it, such as evenings, weekends, vacations, etc.
+   Your PC could be running intensive processes for many weeks. If you do not have a dedicated device, start or schedule recovery runs on your main PC at times you're not using it, such as evenings, weekends, vacations, etc.
 
-   > IMPORTANT! Check your device's power options to ensure it will not sleep after a period of user inactivity.
+   > IMPORTANT! Check your device's power options to ensure it does not sleep after a period of user inactivity.
 
 1. The technical ability to install software and run command-line tools.
 

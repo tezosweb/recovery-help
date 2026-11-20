@@ -9,7 +9,7 @@ table {
 	border-spacing: 0;
 	border-collapse: collapse;
 	empty-cells: show;
-  margin: 1em auto 1.5em;
+  margin: 1.5em auto 2em;
 }
 
 th, td {
@@ -25,7 +25,7 @@ th, td {
 }
 
 thead {
-  background-color: var(--color-back4);
+  background-color: var(--color-back2);
 }
 
 th {
@@ -33,5 +33,5 @@ th {
 }
 
 tbody > :nth-child(even) {
-  background-color: var(--color-back2);
+  background-color: var(--color-back4);
 }
